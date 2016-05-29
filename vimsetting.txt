@@ -63,6 +63,7 @@ jshint//Javascript语法检测
   set ts=2
   set sw=2
   set expandtab
+  set ruler 快速匹配
   set number
   map <C-t> :NERDTreeToggle<CR>
   set autoindent
