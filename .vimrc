@@ -4,7 +4,7 @@ filetype plugin indent on
 set ts=2
 set sw=2
 set expandtab
-//快速匹配
+#/快速匹配
 set ruler
 set number
 map <C-t> :NERDTreeToggle<CR>
