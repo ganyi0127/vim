@@ -1,0 +1,72 @@
+pathogen //插件管理
+  host:https://github.com/tpope/vim-pathogen
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  然后在~/.vimrc加入:
+  execute pathogen#infect()
+
+vim-surround//智能包围
+  host:https://github.com/tpope/vim-surround
+  cd ~/.vim/bundle
+  git clone git://github.com/tpope/vim-surround.git
+
+vim-repeat//自动重复插件
+  host:https://github.com/tpope/vim-repeat
+  cd ~/.vim/bundle
+  git clone git://github.com/tpope/vim-repeat.git
+
+NERDTree//文件管理器
+  host:https://github.com/scrooloose/nerdtree
+  cd ~/.vim/bundle
+  git clone https://github.scrooloose/nerdtree.git
+
+snipemate.vim//代码片段伴侣
+  host:https://github.com/msanders/snipmate.vim
+  cd ~/.vim/bundle
+  git clone git://github.com/msanders/snipmate.vim.git
+
+syntastic//语法错误定位
+  host:https://github.com/scrooloose/syntastic
+  cd ~/.vim/bundle && \
+  git clone https://github.com/scrooloose/syntastic.git
+
+vim-es6//ES6语法高亮及代码片段
+  host:https://github.com/isRuslan/vim-es6
+  cd ~/.vim/bundle
+  git clone https://github.com/isRuslan/vim-es6.git
+
+jshint//Javascript语法检测
+  host:https://github.com/walm/jshint.vim
+  sudo npm install -g jshint
+  cd ~/.vim/bundle
+  git clone https://github.com/wookiehangover/jshint.vim
+  vim ~/.jshintrc
+    {
+      "esnext":true
+    }
+
+配置Vim和Gvim
+~/.vimrc
+  execute pathogen#infect()
+  syntax on
+  filetype plugin indent on
+  set ts=2
+  set sw=2
+  set expandtab
+  set number
+  map <C-t> :NERDTreeToggle<CR>
+  set autoindent
+  inoremap ( ()<Left>
+  inoremap { {}<Left>
+  inoremap [ []<Left>
+  inoremap < <><Left>
+  inoremap ' ''<Left>
+  inoremap " ""<Left>
+
+~/.gvimrc
+  set lines=61
+  set columns=159
+  colo solarized
+  set background=dark
+  set guifont=Ubuntu\Mono\11
+  NERDTreeToggle
