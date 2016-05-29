@@ -1,0 +1,93 @@
+#添加远程仓库地址
+git remote add origin git@ github:ganyi0127/vim.git
+
+#设置远程仓库地址(用于修改远程仓库地址)
+git remote set-url origin git@ github:ganyi0127/vim.git
+
+#删除远程仓库
+git remote rm <repository>
+
+#在服务器创建纯仓库
+mkdir vim.git && cd vim.git && git --bare init
+
+#客户端首次提交
+git push -u origin master
+
+#设置远程仓库的HEAD指向master分支
+git remote set-head origin master
+
+//文件操作
+#显示某次提交的内容
+git show
+
+#抛弃工作区修改
+git co --<file>
+
+#将工作文件修改提交到本地暂存区
+git add <file> 
+
+#将所有修改过的工作文件提交暂存区
+git add .
+
+#从版本库中删除文件
+git rm <file>
+
+#从暂存区恢复到工作文件
+git reset <file>
+git reset --
+
+//查看文件diff
+#比较当前文件和暂存区文件差异
+git diff <file>
+
+#比较两次提交之间的差异
+git diff <id1><id2>
+
+//Mac上可以使用tig代替diff和log,brew install tig
+
+//查看、切换、创建和删除分支
+#查看远程分支
+git br -r
+
+#创建新的分支
+git br <new_branch>
+
+#查看各个分支最后提交信息
+git br -v
+
+#切换到某个分支
+git co <branck>
+git checkout <branck>
+
+#创建新的分支，并切换过去
+git co -b <new_branch>
+
+#删除某个分支
+git br -d <branch>
+
+#强制删除某个分支
+git br -D <branck>
+
+//Git远程分支管理
+#抓取远程仓库所有分支更新并合并到本地
+git pull
+git pull --no-ff 不要快进合并
+
+#抓取仓库更新
+git fetch origin
+
+#将远程主分支合并到本地当前分支
+git merge origin/master
+
+#push所有分支
+git push
+
+#将本地主分支推送到远程主分支
+git push origin master
+git push -u origin master
+
+#创建远程分支，origin是远程仓库名
+git push origin <local_branch>
+
+#先删除本地分支(git br -d <branck>),然后再push删除远程分支
+git push origin :<remote_branch>
