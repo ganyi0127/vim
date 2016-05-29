@@ -1,3 +1,9 @@
+//创建本地SSH
+  命令 ssh-keygen
+  or
+  ssh-keygen -t rsa -C "283925583@qq.com"
+  vim ~/.ssh/id_rsa.pub to github/setting..
+
 pathogen //插件管理
   host:https://github.com/tpope/vim-pathogen
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
