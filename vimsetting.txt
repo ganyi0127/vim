@@ -4,6 +4,10 @@
   ssh-keygen -t rsa -C "283925583@qq.com"
   vim ~/.ssh/id_rsa.pub to github/setting..
 
+//连接远程git仓库
+  git remote add origin https://github.com/ganyi0127/*.git
+  git push -u origin master
+
 pathogen //插件管理
   host:https://github.com/tpope/vim-pathogen
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
