@@ -28,7 +28,7 @@ vim-repeat//自动重复插件
 NERDTree//文件管理器
   host:https://github.com/scrooloose/nerdtree
   cd ~/.vim/bundle
-  git clone https://github.scrooloose/nerdtree.git
+  git clone https://github.com/scrooloose/nerdtree.git
 
 snipemate.vim//代码片段伴侣
   host:https://github.com/msanders/snipmate.vim
