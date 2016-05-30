@@ -55,6 +55,10 @@ jshint//Javascript语法检测
       "esnext":true
     }
 
+vim-nodejs-complete//Vim代码提示for Node.js
+  git clone https://github.com/myhere/vim-nodejs-complete.git
+  使用方法:在编辑js代码的时候，按ctrl-x和ctrl-o进入提示模式:
+
 配置Vim和Gvim
 ~/.vimrc
   execute pathogen#infect()
