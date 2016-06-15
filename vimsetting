@@ -3,13 +3,13 @@
 邮箱 '[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}'
 用户名 '^[A-Za-z0-9]{6,20}+$'
 
-//创建本地SSH
+#创建本地SSH
   命令 ssh-keygen
   or
   ssh-keygen -t rsa -C "283925583@qq.com"
   vim ~/.ssh/id_rsa.pub to github/setting..
 
-//连接远程git仓库
+#连接远程git仓库
   git remote add origin https://github.com/ganyi0127/*.git
   git push -u origin master
 
@@ -64,7 +64,7 @@ vim-nodejs-complete//Vim代码提示for Node.js
   git clone https://github.com/myhere/vim-nodejs-complete.git
   使用方法:在编辑js代码的时候，按ctrl-x和ctrl-o进入提示模式:
 
-配置Vim和Gvim
+#配置Vim和Gvim
 ~/.vimrc
   execute pathogen#infect()
   syntax on
@@ -83,6 +83,30 @@ vim-nodejs-complete//Vim代码提示for Node.js
   inoremap ' ''<Left>
   inoremap " ""<Left>
 
+"自动缩进，自动继承前一行的缩进方式
+set autoindent
+"语法高亮
+syntax on
+"自动检测文件类型并加载相应的设置
+filetype plugin indent on
+"智能对齐方式
+set smartindent
+set tabstop=2
+"统一缩进为2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+"快速匹配
+set ruler
+set number
+"缺省不产生备份文件
+set nobackup
+set nowritebackup
+setlocal noswapfile
+map<C-t> :NERDTreeToggle<CR>
+
+#
+call pathogen#infect()
 ~/.gvimrc
   set lines=61
   set columns=159
