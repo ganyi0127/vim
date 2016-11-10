@@ -25,28 +25,41 @@ set ruler
 set number
 "禁用备份
 set nobackup
-set nowritebackup
+
 "禁用临时文件swp
-setlocal noswapfile
+set nowritebackup
 "禁用错误提示音
-set noeb
+setlocal noswapfile
 "目录树插件快捷键
-map<C-t> :NERDTreeToggle<CR>
+set noeb
 "插件管理
+map<C-t> :NERDTreeToggle<CR>
+
 call pathogen#infect()
 filetype plugin indent on
 
 "header of shell 
-autocmd BufNewFile *.sh :call SetTitle()
+autocmd BufNewFile *.sh,*.html :call SetTitle()
 func SetTitle()
   if &filetype == 'sh'
     call setline(1,"\#!/bin/sh")
     call setline(2,"\##########################################################")
-    call setline(3,"\#Creat time: ".strftime("%Y-%m-%d %H:%M:%S"))
-    call setline(4,"\#Last edited: ")
-    call setline(5,"\#Author: ganyi")
-    call setline(6,"\#Mail: 283925583@qq.com")
-    call setline(7,"\#Description:")
+    call setline(3,"\#create time: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call setline(4,"\#last edited: ")
+    call setline(5,"\#author: ganyi")
+    call setline(6,"\#mail: 283925583@qq.com")
+    call setline(7,"\#description:")
     call setline(8,"\##########################################################")
+  elseif &filetype == 'html'
+    call setline(1,"\<!DOCTYPE HTML>")
+    call setline(2,"\<html lang='en'>")
+    call setline(3,"\  <head>")
+    call setline(4,"\    <meta charset='UTF-8'>")
+    call setline(5,"\    <title></title>")
+    call setline(6,"\  </head>")
+    call setline(7,"\  <body>")
+    call setline(8,"\    ")
+    call setline(9,"\  </body>")
+    call setline(10,"\</html>")
   endif
 endfunc
