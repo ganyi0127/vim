@@ -1,47 +1,68 @@
 # 正则表达式
-## 电话 ^((13[0-9]|(15[^4,\D])|(18[0,0-9]))\d{8}$ ##邮箱 [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4} ##用户名 ^[A-Za-z0-9]{6,20}+$
-# 创建本地SSH ##命令
-
-//ex1
-ssh-keygen
-//ex2
-ssh-keygen -t rsa -C '283925583@qq.com'
+## 电话 
+^((13[0-9]|(15[^4,\D])|(18[0,0-9]))\d{8}$ 
+## 邮箱 
+[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4} ##用户名 ^[A-Za-z0-9]{6,20}+$
+# 创建本地SSH 
+## 命令
+  //ex1
+    ssh-keygen
+  //ex2
+  ssh-keygen -t rsa -C '283925583@qq.com'
 then
-vim ~/.ssh/id_rsa.pub
+  vim ~/.ssh/id_rsa.pub
 copy to
 github/setting...
 
-#连接远程git仓库
+# 连接远程git仓库
 
   //add remote
   git remote add origin https://github.com/ganyi0127/*.git
   //push
   git push -u origin master
-#pathogen 插件管理 https://github.com/tpope/vim-pathogen
+# pathogen 插件管理 https://github.com/tpope/vim-pathogen
 
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vimrc
 execute pathogen#infect()
-##添加插件
-
+## 添加插件
 cd ~/.vim/bundle
 git clone $GIT_PATH
-#vim-surround 智能包围 https://github.com/tpope/vim-surround
+# vim-surround 智能包围 
+```
+https://github.com/tpope/vim-surround
+```
 
-#vim-repeat 自动重复插件 https://github.com/tpope/vim-repeat
+# vim-repeat 自动重复插件 
+```
+https://github.com/tpope/vim-repeat
+```
 
-#NERDTree 文件管理器 https://github.com/scrooloose/nerdtree
+# NERDTree 文件管理器 
+```
+https://github.com/scrooloose/nerdtree
+```
 
-#snipemate.vim 代码片段伴侣
-
+# snipemate.vim 代码片段伴侣 
+```
 https://github.com/msanders/snipmate.vim
+```
 
-#syntastic 语法错误定位 https://github.com/scrooloose/syntastic
+# syntastic 语法错误定位 
+```
+https://github.com/scrooloose/syntastic
+```
 
-#vim-es6 ES6语法高亮及代码片段 https://github.com/isRuslan/vim-es6
+# vim-es6 ES6语法高亮及代码片段 
+```
+https://github.com/isRuslan/vim-es6
+```
 
-#jshint Javascript语法检测 https://github.com/walm/jshint.vim
+# jshint Javascript语法检测 
+```
+https://github.com/walm/jshint.vim
+```
 
 step 1
 sudo npm install -g jshint
