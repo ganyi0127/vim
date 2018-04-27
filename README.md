@@ -68,7 +68,7 @@ https://github.com/walm/jshint.vim
 ```
 sudo npm install -g jshint
 ```
-step 2
+* step 2
 ```
 cd ~/.vim/bundle
 git clone https://github.com/wookiehangover/jshint.vim
