@@ -29,55 +29,62 @@ execute pathogen#infect()
 ## 添加插件
 cd ~/.vim/bundle
 git clone $GIT_PATH
-# vim-surround 智能包围 
+### vim-surround 智能包围 
 ```
 https://github.com/tpope/vim-surround
 ```
 
-# vim-repeat 自动重复插件 
+### vim-repeat 自动重复插件 
 ```
 https://github.com/tpope/vim-repeat
 ```
 
-# NERDTree 文件管理器 
+### NERDTree 文件管理器 
 ```
 https://github.com/scrooloose/nerdtree
 ```
 
-# snipemate.vim 代码片段伴侣 
+### snipemate.vim 代码片段伴侣 
 ```
 https://github.com/msanders/snipmate.vim
 ```
 
-# syntastic 语法错误定位 
+### syntastic 语法错误定位 
 ```
 https://github.com/scrooloose/syntastic
 ```
 
-# vim-es6 ES6语法高亮及代码片段 
+### vim-es6 ES6语法高亮及代码片段 
 ```
 https://github.com/isRuslan/vim-es6
 ```
 
-# jshint Javascript语法检测 
+### jshint Javascript语法检测 
 ```
 https://github.com/walm/jshint.vim
 ```
 
-step 1
+* step 1
+```
 sudo npm install -g jshint
+```
 step 2
+```
 cd ~/.vim/bundle
 git clone https://github.com/wookiehangover/jshint.vim
 vim ~/.jshintrc
   {
     "esnext":true
   }
-#vim-nodejs-complete Vim代码提示for Node.js https://github.com/myhere/vim-nodejs-complete.git
+  ```
+### vim-nodejs-complete Vim代码提示for Node.js
+```
+https://github.com/myhere/vim-nodejs-complete.git
+```
 
 使用方法:在编辑js代码的时候，按ctrl-x和ctrl-o进入提示模式:
-#配置Vim和Gvim
-
+## 配置Vim和Gvim
+```
 ~/.vimrc
   execute pathogen#infect()
   syntax on
@@ -126,3 +133,4 @@ colo solarized
 set background=dark
 set guifont=Ubuntu\Mono\11
 NERDTreeToggle
+```
